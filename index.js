@@ -13,6 +13,7 @@ app.set('views', './views');
 //Static files
 app.use(express.static('public/images'));
 app.use(express.static('public/css'));
+app.use(express.static('src'));
 
 ////////////////////////////////
 /*shit to do before render */

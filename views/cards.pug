@@ -6,7 +6,9 @@ html(lang="en")
         title Cards and Pugs
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css")
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
-    body 
+        link(rel="stylesheet", href="style.css")
+        script(src="app.js")
+    body
       div(class="row")
         
         -
@@ -17,8 +19,14 @@ html(lang="en")
         each deck in decks
           each item in list_of_cards
             div(class="col-3" id=deck +"_" + item.split(".")[0] +"_div")
-              div(class="card border-primary ")
+              div(class="card border-primary m-1")
+                button(type="submit" class="btn btn-primary" onClick="switcharoo_with_id('" + deck +"_" + item.split(".")[0] +"_div" +"')")
                 div(class="card-body")
-                  img(src=item id=deck +"_" + item.split(".")[0] +"_topside" class="card-img-top " style="position: fixed;top: 0px; left: 0px;z-index=:-1;")
-                  img(src="card-bg.jpg" id=deck +"_" + item.split(".")[0] +"_backside" class="card-img-top" style="position: fixed;top: 0px; left: 0px;z-index:50;")
+                  img(src=item id=deck +"_" + item.split(".")[0] +"_topside" class="card-img-top img-fluid card-front" )
+                  img(src="card-bg.jpg" id=deck +"_" + item.split(".")[0] +"_backside" class="card-img-top img-fluid card-back backside-up" style="")
           - list_of_cards.sort(() => Math.random()-0.5)
+          //- display: block; margin-left: auto;margin-right:auto;
+          //- //onClick="backside_up_with_id(" + deck +"_" + item.split(".")[0] +"_div" +")"
+      div(class="row")
+        div(class="col-12 centered-fucking-div")
+          button(type="submit" class="btn btn-primary" style="width: 25%;" onClick="switcharoo()")

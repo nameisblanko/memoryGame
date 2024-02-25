@@ -1,3 +1,39 @@
-@tailwind base;
+/* setting back-side of cards' style */
+.card-back {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index:50;
+    /* opacity: 1; */
+}
+/* setting front-side of cards' style */
+.card-front {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    /* opacity: 1; */
+}
+
+.centered-fucking-div {
+        margin: auto;
+        width: 50%;
+        /* border: 3px solid green; */
+        padding: 10px;
+}
+.backside-up {
+    opacity: 1;
+}
+.frontside-up {
+    opacity: 0;
+}
+.up-close {
+    z-index: 36;
+}
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
