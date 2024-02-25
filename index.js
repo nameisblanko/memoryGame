@@ -15,17 +15,17 @@ app.use(express.static('public/images'));
 app.use(express.static('public/css'));
 app.use(express.static('src'));
 
-////////////////////////////////
-/*shit to do before render */
+
+/*stuff to do before render */
 const datas_array = [];
-//tailwind css
+
 
 /*render */
 app.get('/', (req, res) => res.render('./index.pug'));
 app.get('/cards', (req, res) => {res.render('./cards.pug')});
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-/*shit to do after render */
+
 
 
 
