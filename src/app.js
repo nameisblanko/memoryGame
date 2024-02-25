@@ -1,6 +1,6 @@
 let state = 0;
 function switcharoo(){
-    //do some shit about flippin' tha good ol' cards
+    //do some stuff about flippin' tha good ol' cards
     switch (state) {
         case 0:
             backside_up();
@@ -26,7 +26,7 @@ function backside_up(){
 }
 
 function switcharoo_with_id(id){ //id needs to be the div's id
-    //do some shit about flippin' tha good ol' cards
+    
     switch (state) {
         case 0:
             backside_up_with_id(id);
